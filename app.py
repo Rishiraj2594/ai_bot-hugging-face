@@ -32,11 +32,11 @@ if prompt := st.chat_input("Ask me anything!"):
 
     os.environ["HUGGINGFACE_ACCESS_TOKEN"] = st.session_state.chatbot_api_key
     app = App.from_config(config_path="config.yaml")
-    st.status("Loading data...")
-    app.add("https://hsd-dev.org/",data_type = 'docs_site')
-    app.add("https://learn.namebase.io/", data_type="docs_site")
+    # st.status("Loading data...")
+    # app.add("https://hsd-dev.org/",data_type = 'docs_site')
+    # app.add("https://learn.namebase.io/", data_type="docs_site")
     # app.add("youtube_channel","@agaamin")
-    st.status(label="Complete",state="complete")
+    # st.status(label="Complete",state="complete")
     if prompt.startswith("/add"):
         with st.chat_message("user"):
             st.markdown(prompt)
